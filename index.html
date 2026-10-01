@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Esha Kurana | Game Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --panel: radial-gradient(circle, rgba(0, 13, 201, 1) 0%, rgba(42, 0, 133, 1) 100%);
+    --ink: #2e2e2e;
+    --white: #ffffff;
+    --page: #eef0f5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Open Sans", Arial, sans-serif;
+    background: var(--page);
+    color: var(--ink);
+    min-height: 100vh;
+    padding: 16px;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: calc(100vh - 32px);
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 5px 10px #888888;
+  }
+
+  /* LEFT PANEL */
+  .profile {
+    background: #000dc9;
+    background: var(--panel);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .profile img {
+    width: 198px;
+    height: 198px;
+    object-fit: cover;
+    display: block;
+    background: #d9cfcf;
+  }
+  .profile h1 {
+    color: white;
+    font-size: 28px;
+    line-height: 1.1;
+    margin-top: 22px;
+    max-width: 260px;
+  }
+  .profile h2 {
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  .btn {
+    display: block;
+    background: var(--ink);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    padding: 11px 0;
+    width: 198px;
+    transition: background .2s;
+  }
+  .btn:hover, .btn:focus-visible { background: #000; }
+  .profile .btn { margin-top: 20px; }
+
+  .social { display: flex; gap: 14px; align-items: center; margin-top: 34px; }
+  .social a { color: var(--white); display: flex; }
+  .social svg { width: 30px; height: 30px; fill: currentColor; }
+
+  /* RIGHT PANEL */
+  .about {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 70px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .about-inner { max-width: 370px; margin: 0 auto; width: 100%; }
+  .about h1 { font-size: 42px; line-height: 1.1; }
+  .about p {
+    font-size: 14.5px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #000;
+    margin-top: 12px;
+  }
+  .actions { display: flex; gap: 38px; margin-top: 105px; }
+  .actions .btn { width: 165px; }
+
+/* TABLET / MOBILE */
+@media (max-width: 760px) {
+  .card { grid-template-columns: 1fr; }
+  .about { padding: 40px 28px; }
+  .actions {
+    margin-top: 40px;
+    flex-wrap: nowrap;   /* keep buttons side by side */
+    gap: 16px;
+  }
+  .actions .btn {
+    width: auto;         /* stop using the fixed 165px */
+    flex: 1;             /* each button takes half the row */
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+  .about { padding: 32px 20px; }
+  .about h1 { font-size: 34px; }
+  .about p { font-size: 14px; }
+  .actions { gap: 12px; }
+}
+</style>
+</head>
+<body>
+
+<main class="card">
+
+  <!-- LEFT: profile -->
+  <section class="profile">
+    <!-- Replace "profile.jpg" with your own photo -->
+    <img src="face.png" alt="Photo of Joeffrey B. Lazarte" style="border-radius: 8px">
+    <h1>Joeffrey B. Lazarte</h1>
+    <h2>Indie Game Dev • IT Technician • Virtual Assistant</h2>
+    <a class="btn" href="mailto:dodot.lazarte@gmail.com">Email me</a>
+
+    <nav class="social" aria-label="Social media">
+      <!-- Replace each href="#" with your profile links -->
+      <a href="https://www.instagram.com/dodotxd/" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.2 5.8a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/></svg>
+      </a>
+<a href="https://github.com/DodotXDD" aria-label="GitHub" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 6.844c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .321.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+</a>
+      </a>
+      <a href="https://www.facebook.com/joeffrey.lazarte.988/" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M14 8V6.500c0-.7.200-1 1.200-1H17V2h-2.800C11.300 2 10 3.700 10 6v2H7.500v3.500H10V22h4v-10.500h2.800L17.300 8H14z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/joeffrey-lazarte-47297b235" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm1.500 7.500V19h3V9.500h-3zM7 5a1.700 1.700 0 1 0 0 3.400A1.700 1.700 0 0 0 7 5zm4 4.500V19h3v-5c0-1.400.6-2.200 1.700-2.200 1.100 0 1.500.8 1.500 2.200v5h3v-5.700c0-2.700-1.400-4-3.300-4-1.300 0-2.100.7-2.500 1.300V9.500H11z" fill-rule="evenodd"/></svg>
+      </a>
+    </nav>
+  </section>
+
+  <!-- RIGHT: about -->
+  <section class="about">
+    <div class="about-inner">
+      <h1>About Me</h1>
+      <p>
+I am a motivated Bachelor of Science in Information Technology graduate from Asian College, bridging the gap between technical IT support and creative digital asset creation. With hands-on experience as an IT Desktop Support OJT at TTEC, an IT Technician at Rusco Motor Inc., and a Content Analyst at Straive, I bring strong expertise in hardware/software troubleshooting, system re-imaging, and quality assurance. Beyond my technical foundation, I am passionate about game development, utilizing my skills in 3D modeling, 3D animation, and video editing to bring projects to life. I am adaptable, detail-oriented, and ready to contribute as an IT professional, Virtual Assistant, or creative collaborator.
+      </p>
+      <div class="actions">
+        <!-- Replace with links to your resume and portfolio -->
+        <a class="btn" href="https://drive.google.com/file/d/1VAEqomhsJ4fU99PU3t4I140rJVfpsrLW/view?usp=sharing">Resume</a>
+        <a class="btn" href="https://github.com/DodotXDD">Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
